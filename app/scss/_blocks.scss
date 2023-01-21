@@ -1,0 +1,281 @@
+//////////////////////////////////////////////////////
+// #BUTTON COMPONENT (INCLUDING BUTTON LINKS)
+// Guideline: https://moderncss.dev/css-button-styling-guide/
+/////////////////////////////////////////////////////
+
+$btnBgColor: hsl($secondary);
+$btnTextColor: hsl($white);
+$btnHoverBgColor: hsl($secondary-lighter01);
+$btnActiveColor: hsl($secondary);
+$btnRadius: 100vh;
+$btnShadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+$btnPadding: 0.5em 1.125em;
+
+// Defaults Styles
+a.button,
+button.button,
+[type='submit'].button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+button.button,
+[type='submit'].button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  
+    @media screen and (-ms-high-contrast: active) {
+      border: 2px solid currentcolor;
+    }
+}
+
+a.button {
+    text-decoration: none;
+}
+
+// Visual Styles
+
+a.button, 
+button.button,
+[type='submit'].button {
+  background-color: $btnBgColor;
+  color: $btnTextColor;
+  border-radius: $btnRadius;
+  box-shadow: $btnShadow;
+  padding: $btnPadding;
+  font-weight: 600;
+  min-width: 10ch;
+  min-height: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 220ms all ease-in-out;
+
+  &:hover{
+    background: $btnHoverBgColor;
+  }
+  &:active {
+    box-shadow: 0 0 0 4px $btnActiveColor;
+  }
+  &:focus-visible {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px $btnActiveColor;
+  }
+
+  // modifiers
+  &--primary {
+    background-color: hsl(var(--primary));
+    color: $btnTextColor;
+    &:hover {
+      background-color: hsl(var(--primary-lighter01));
+    }
+    &:active {
+      box-shadow: 0 0 0 4px hsl(var(--primary-darker01));
+    }
+  }
+  &--block {
+    width: 100%;
+  }
+  &--outlined {
+    background-color: transparent;
+    box-shadow: 0 0 0 4px hsl($primary) inset;
+    color: hsl($primary);
+    &:hover {
+      background-color: hsl($primary);
+      color: hsl($secondary);
+    }
+    &:active {
+      box-shadow: 0 0 0 4px hsl(var(--primary-darker01));
+    }
+  }
+}
+
+
+//////////////////////////////////////////////////////
+// #Link COMPONENT
+// Guideline: https://css-tricks.com/a-complete-guide-to-links-and-buttons/
+/////////////////////////////////////////////////////
+// nav a {}
+// a[aria-current="page"] {}
+
+article a,
+a.link {
+  color: hsl($secondary);
+  // text-decoration: underline;
+  text-transform: capitalize;
+  box-shadow: 0 -2px hsl($secondary) inset;
+  font-weight: 600;
+  transition: 220ms all ease-in-out;
+  white-space: nowrap;
+  // padding-block: 0.25em;
+}
+
+article a:is(:hover, :focus),
+a.link:hover {
+  box-shadow: 0 -5em hsl($secondary) inset;
+  color: hsl($white);
+}
+
+a.link--footer {
+  color: hsl($white);
+  box-shadow: 0 0 hsl($white) inset;
+}
+a.link--footer:hover {
+  color: hsl($secondary);
+  box-shadow: 0 -5em hsl($white) inset;
+}
+
+
+//////////////////////////////////////////////////////
+// #FORM COMPONENT
+// Guideline: https://web.dev/learn/forms
+/////////////////////////////////////////////////////
+form {
+  width: 100%;
+  max-inline-size: 30em;
+  margin-inline: auto;
+  caret-color: hsl($primary);
+}
+label,
+input,
+textarea,
+select,
+[type="submit"] {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+input,
+textarea,
+select {
+  padding: 0.5em 1em;
+  width: 100%;
+  border: 2px solid hsla($secondary, 0.7);
+  background-color: hsla($secondary, 0.1);
+  outline: none;
+  transition: 280ms all ease-in-out;
+}
+:is(input,
+textarea,
+select):focus-visible {
+  border: 2px solid hsla($secondary, 1);
+  box-shadow: 0 0 8px hsla($secondary, 0.7);
+}
+label {
+  display: block;
+  margin-block-end: 0.5em;
+  text-transform: capitalize;
+}
+input {
+  border-radius: 100vh;
+}
+ // input[readonly] {
+//     cursor: default;
+// }
+textarea {
+  border-radius: 0.5em;
+  resize: vertical;
+}
+
+[type="submit"] {
+  margin-block-start: 2em;
+}
+::placeholder {
+  color: hsla($secondary, 0.7);
+}
+
+// validation using javascript
+.form-group {
+  position: relative;
+}
+// .form-group.success input {
+//   border-color: #23cc71;
+// }
+.form-group.error input {
+  border-color: #ff3333;
+}
+.form-group .message {
+  display: none;
+  font-weight: 500;
+}
+.form-group.error .message,
+.form-group.success .message{
+  display: block;
+}
+.form-group.error .message {
+  color: #ff3333;
+} 
+.form-group.success .message {
+  color: #23cc71;
+} 
+.form-group .message::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900; 
+  margin-right: 0.25em;
+}
+.form-group.error .message::before {
+  content: "\f06a";
+} 
+.form-group.success .message::before {
+  content: "\f058";
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container::after {
+  content: '';
+  width: 0.6em;
+  height: 0.5em;
+  background-color: hsla($secondary, 0.7);
+  clip-path: polygon(0 0, 50% 100%, 100% 0%);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  transition: 300ms all ease-in-out;
+}
+
+.select-container:focus-within:after {
+  transform: rotate(180deg);
+}
+
+input.select {
+  padding-right: 2.5em;
+}
+
+.option-group {
+  
+  height: 0;         
+  overflow: hidden;
+  
+  .option {
+      padding: 0.5em 1em;
+      cursor: default;
+      border-bottom: 1px solid hsla($secondary, 0.1);
+      &:hover {
+          background-color: hsla($secondary, 0.2);
+      }
+  }
+}
+.select-container:focus-within .option-group {
+  height: auto;
+  background-color: #fff;
+  margin-top: 0.5em;
+  border: 1px solid hsl($secondary);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.25rem hsla($secondary, 0.7);
+}
+
+
+//////////////////////////////////////////////////////
+// #PAGE BANNER
+/////////////////////////////////////////////////////
+
+

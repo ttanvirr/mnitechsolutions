@@ -1,0 +1,17 @@
+
+.page-banner {
+    $navheight: 3.5rem; //56px
+    padding-block-start: calc(#{$navheight} + 3em) !important;
+    padding-block-end: 6em;
+
+    @include breakpoint-up(md) {
+      padding-block-start: calc($navheight * 1.5 + 5em) !important;
+      padding-block-end: 7em;
+    }
+
+    .subtitle {
+      max-width: 50ch;
+      margin-inline: auto;
+    }
+
+}

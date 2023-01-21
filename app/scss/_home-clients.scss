@@ -1,0 +1,32 @@
+.home {
+    .clients {
+        .grid {
+    
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            
+            @include breakpoint-up(sm) {
+                grid-template-columns: repeat(3, auto);
+                gap: 5rem;
+            }
+            @include breakpoint-up(lg) {
+                grid-template-columns: repeat(4, auto);
+            }
+            @include breakpoint-up(xl) {
+                gap: 7rem;
+            }
+    
+            > * {
+                margin-inline: auto;
+            }
+    
+            img {
+                max-width: 100%;
+                height: auto;
+                max-block-size: 100px;
+            }
+        }
+    }
+}

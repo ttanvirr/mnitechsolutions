@@ -1,0 +1,68 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'compositions';
+@import 'blocks';
+
+@import 'home-header';
+@import 'home-services';
+@import 'home-about';
+@import 'home-clients';
+@import 'home-get-started';
+@import 'about';
+@import 'contact';
+@import 'staffing-solutions';
+@import 'app-dev';
+@import 'webdev';
+@import 'graphics-design';
+@import 'architectural-solutions';
+@import 'popup__get-started-form';
+@import 'utils';
+// @import 'animations';
+
+// @import 'why-us';
+// @import 'page-banner';
+// @import 'webdev';
+
+
+// General selectors
+////////////////////////////////
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.75px;
+    background-color: $white;
+    color: $dark;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+          
+          
+          
+          

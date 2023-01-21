@@ -1,0 +1,327 @@
+// Utility classes
+          ///////////////////////////////////
+
+.wrapper {
+  width: 100%;
+}
+
+// .wrapper.main {
+//   overflow-x: hidden;
+//   overflow-y: visible;
+//   position: relative;
+//   margin-top: -3rem;
+
+//   @include breakpoint-up(sm) {
+//     margin-top: -4rem;
+//   }
+//   @include breakpoint-up(lg) {
+//       margin-top: -5rem;
+//   }
+// }
+
+.container {
+  padding-inline: 1.75em;
+     
+  @include breakpoint-up(md) {
+      width: 88%;
+      max-width: 1430px;
+      margin: 0 auto;   
+  }     
+
+}
+
+.container[data-type="free-container"] {
+  @include breakpoint-up(xl) {
+    width: 95%;
+    max-width: unset;
+  }
+}
+
+
+section {
+  padding-block: 1.5em 4em;
+
+  // @include breakpoint-up(sm) {
+  //   padding-block: 1.75rem 5rem;
+  // }
+  // @include breakpoint-up(md) {
+  //   padding-block: 2rem 6rem;
+  // }
+  // @include breakpoint-up(lg) {
+  //   padding-block: 2.5rem 8rem;
+  // }
+  // @include breakpoint-up(xl) {
+  //   padding-block: 3rem 10rem;
+  // }
+}
+
+.section-title,
+.title {
+  text-transform: capitalize;
+}
+
+.section-title {
+  margin-inline: auto;
+  font-size: 3rem;
+  color: hsl($secondary)
+}
+
+.section-title + * {
+  margin-block-start: 5em;
+
+}
+
+.section-title + .subtitle {
+  margin-block-start: 1em;
+  margin-block-end: 3em;
+}
+
+.article-title {
+  width: 100%;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  color: hsl($secondary);
+  padding-bottom: 0.125em;
+  margin-bottom: 0.5em;
+  // box-shadow: 0 -16px hsla($primary, 0.2) inset;
+}
+
+.article-date {
+  font-size: 0.9em;
+  color: hsl($secondary);
+}
+
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.breadcrumb {
+  background-color: hsl($secondary-lighter02);
+  font-weight: 700;
+  color: hsl($primary);
+  padding-block: 0.5em;
+}
+.breadcrumb a {
+  color: hsl($primary);
+}
+.breadcrumb .current {
+  box-shadow: inset 0 -2px hsl($primary);
+}
+
+
+          
+// spacing
+.mb0 {
+    margin-bottom: 0;
+}
+
+
+
+//////////////////////////////
+// #Text
+//////////////////////////////
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+  
+
+.fs100 {
+  font-size: $fs100;
+}
+.fs200 {
+  font-size: $fs200;
+}
+.fs300 {
+  font-size: $fs300;
+}
+.fs400 {
+  font-size: $fs400;
+}
+.fs500 {
+  font-size: $fs500;
+}
+.fs600 {
+  font-size: $fs600;
+}
+.fs700 {
+  font-size: $fs700;
+}
+.fs800 {
+  font-size: $fs800;
+}
+.fs900 {
+  font-size: $fs900;
+}
+
+// Margins
+.mb-xs {margin-bottom: $space-xs}
+.mb-sm {margin-bottom: $space-sm}
+.mb-md {margin-bottom: $space-md}
+.mb-lg {margin-bottom: $space-lg}
+  
+
+  .icon {
+    vertical-align: middle;
+  }
+
+  // .has-icon::before {
+  //   display: inline-block;
+  //   text-rendering: auto;
+  //   -moz-osx-font-smoothing: auto;
+  //   -webkit-font-smoothing: antialiased;
+  // }
+
+
+
+  ///////////////////////////////////
+  // #Colors
+  ///////////////////////////////////
+  .color-primary {
+    color: hsl($primary);
+  }
+  .color-secondary {
+    color: hsl($secondary);
+  }
+  .color-secondary-lighter01 {
+    color: hsl($secondary-lighter01);
+  }
+  .color-secondary-lighter02 {
+    color: hsl($secondary-lighter02);
+  }
+  .color-white {
+    color: hsl($white);
+  }
+  .color-dark {
+    color: hsl($dark);
+  }
+  
+  .bg-transparent {
+    background-color: transparent;
+  }
+
+  .bg-primary {
+    background-color: hsl($primary);
+  }
+  .bg-secondary {
+    background-color: hsl($secondary);
+  }
+  .bg-secondary-lighter01 {
+    background-color: hsl($secondary-lighter01);
+  }
+  .bg-white {
+    background-color: hsl($white);
+  }
+  .bg-dark {
+    background-color: hsl($dark);
+  }
+
+  
+  .ellipsis {
+    width: 100%;
+    display: block;  // or inline-block
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+
+
+// Visibility
+
+// visibility
+.hide {
+  display: none;
+}
+.md\:hide {
+  @include breakpoint-up(md) {
+    display: none;
+  }
+}
+.show {
+  display: block;
+}
+.md\:show {
+  @include breakpoint-up(md) {
+    display: block;
+  }
+}
+.lg\:show {
+  @include breakpoint-up(lg) {
+    display: block;
+  }
+}
+.xl\:show {
+  @include breakpoint-up(xl) {
+    display: block;
+  }
+}
+  
+ 
+.hide-for-xs--down {
+  @include breakpoint-down(xs) {
+    display: none !important;
+  }
+}
+.hide-for-sm--up {
+  @include breakpoint-up(sm) {
+    display: none !important;
+  }
+}
+.hide-for-sm--down {
+  @include breakpoint-down(sm) {
+    display: none !important;
+  }
+}
+.hide-for-md--up {
+  @include breakpoint-up(md) {
+    display: none !important;
+  }
+}
+.hide-for-md--down {
+  @include breakpoint-down(md) {
+    display: none !important;
+  }
+}
+
+.hide-for-lg--down {
+    @include breakpoint-down(lg) {
+      display: none !important;
+    }
+}
+.hide-for-xl--up {
+    @include breakpoint-up(xl) {
+      display: none !important;
+    }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  width: 1px; 
+  height: 1px; 
+  margin: -1;
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  clip-path: inset(100%); 
+  position: absolute; 
+  white-space: nowrap; 
+}
+
+  
+  

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNI Tech Solutions | IT & Business Solutions</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- my styles -->
+    <link rel="stylesheet" href="./../dist/style.css">
+    <!-- scripts -->
+    <script src="./../app/js/onLoad.js" defer></script>
+    <script src="./../app/js/scrolled.js" defer></script>
+    <script src="./../app/js/form.js" defer></script>
+    <script src="./../app/js/fabs.js" defer></script>
+    <script src="./../app/components/navbar.js" defer></script>
+    <script src="./../app/components/contactForm.js" defer></script>
+    <script src="./../app/components/pageBanner.js" defer></script>
+    <script src="./../app/components/footer.js" defer></script>
+    <script src="./../app/components/fabs.js" defer></script>
+</head>
+<body>
+    <header class="header | bg--secondary clr--white">
+
+        <navbar-component></navbar-component>
+
+        <!-- banner section -->
+        <page-banner-component bg-src="./../images/about-graphics.png">
+            <div slot="page-title">News</div>
+        </page-banner-component>
+
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> <span>&gt;</span>
+            <a class="current" href="./news.html">News</a>
+        </div>
+    </div>
+    <div class="contact main container">
+        <article class="map flow">
+            <h1 class="article-title">Our Location on Map</h1>
+            <div class="map-wrapper">
+                <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17098.30435420421!2d-73.90320219913643!3d40.749228127525264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25fa1066fe619%3A0xa959daafe16b1899!2sMNI%20Consulting!5e0!3m2!1sen!2sbd!4v1669078982537!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <h3>Head office</h3>
+                <div class="">
+                    <p aria-label="Address">37-47 73rd St Suite 208 Queens, NY 11372, USA</p>
+                    <p aria-label="Email">mnitechsolutions@gmail.com</p>
+                    <p aria-label="Phone number">+1-347-265-8472</p>
+                </div>
+                <h3>Branch office</h3>
+                <div class="">
+                    <p aria-label="Address">15/E, Girls School Road, North Dhanmondi, Kalabagan, Dhaka, Bangladesh</p>
+                    <p aria-label="Phone number">+880-1777768368</p>
+                </div>
+        </article>
+        <article>
+            <div class="form-container">
+                <h1 class="article-title">Feel free to contact us</h1>
+                <form id="form" class="form | flow" action="/" method="get" autocomplete="off">
+                    <div class="form-group">
+                        <label for="fname">First name (required)</label>
+                        <input class="form-control" type="text" id="fname" name="first-name" required autocomplete="first-name">
+                        <small class="message fname-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last name</label>
+                        <input class="form-control" type="text" id="lname" name="last-name" autocomplete="last-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company name</label>
+                        <input class="form-control" type="text" id="company-name" name="company-name" autocomplete="company-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address (required)</label>
+                        <input class="form-control" type="text" id="address" name="address" autocomplete="address">
+                        <small class="message address-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group" >
+                        <label for="service">What service do you need (required)</label>
+                        <div class="select-container">
+                            <input class="select | form-control" type="text" id="service" name="service" placeholder="Select or type a sevice..." required aria-labelledby="service-list">
+                            <ul id="service-list" class="option-group">
+                                <li class="option">IT service</li>
+                                <li class="option">App development</li>
+                                <li class="option">Website development</li>
+                                <li class="option">Graphic design</li>
+                                <li class="option">UI design</li>
+                                <li class="option">Architectural solution</li>
+                            </ul>
+                        </div>
+                        <small class="message service-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address (required)</label>
+                        <input pattern="^[\w\.+-]+@([\w-]+\.)+[a-zA-Z]{2,4}$" required class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com">
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message email-message" aria-label="Validity message"></small>
+                    </div> 
+                    <div class="form-group">
+                        <label for="phone">Contact no. (recommended)</label>
+                        <input class="form-control" type="tel" id="phone" name="phone" autocomplete="contact">
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message" aria-label="Validity message">Validity message</small>
+                        <!-- <span id="contact-foot-note">* Email and/or contact no. must be provided.</span> -->
+                    </div> 
+                    <div class="form-group">
+                        <label for="user-message">Tell us more (required)</label>
+                        <textarea class="form-control" name="user-message" id="user-message" cols="30" rows="5"></textarea>
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message" aria-label="Validity message">Validity message</small>
+                    </div> 
+                    <input class="button" type="submit" value="Submit">
+                </form>
+            </div>
+        </article>
+    </div>
+
+   <!-- footer -->
+   <footer-component></footer-component>
+
+   <!-- floating action buttons -->
+   <fabs-component></fabs-component>
+
+     <!-- Get started popup form | trigger by js -->
+     <div class="get-started popup | hide">
+        <div class="container">
+            <button class="close-btn | button">CLOSE</button>
+        </div>
+        
+        <div class="container"> 
+            <div class="form-container">
+                <form id="form" class="form | flow" action="/" method="get" autocomplete="off">
+                    <div class="form-group">
+                        <label for="fname">First name (required)</label>
+                        <input class="form-control" type="text" id="fname" name="first-name" required autocomplete="first-name">
+                        <small class="message fname-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last name</label>
+                        <input class="form-control" type="text" id="lname" name="last-name" autocomplete="last-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company name</label>
+                        <input class="form-control" type="text" id="company-name" name="company-name" autocomplete="company-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address (required)</label>
+                        <input class="form-control" type="text" id="address" name="address" autocomplete="address">
+                        <small class="message address-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group" >
+                        <label for="service">What service do you need (required)</label>
+                        <div class="select-container">
+                            <input class="select | form-control" type="text" id="service" name="service" placeholder="Select or type a sevice..." required aria-labelledby="service-list">
+                            <ul id="service-list" class="option-group">
+                                <li class="option">IT service</li>
+                                <li class="option">App development</li>
+                                <li class="option">Website development</li>
+                                <li class="option">Graphic design</li>
+                                <li class="option">UI design</li>
+                                <li class="option">Architectural solution</li>
+                            </ul>
+                        </div>
+                        <small class="message service-message" aria-label="Validity message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address (required)</label>
+                        <input pattern="^[\w\.+-]+@([\w-]+\.)+[a-zA-Z]{2,4}$" required class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com">
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message email-message" aria-label="Validity message"></small>
+                    </div> 
+                    <div class="form-group">
+                        <label for="phone">Contact no. (recommended)</label>
+                        <input class="form-control" type="tel" id="phone" name="phone" autocomplete="contact">
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message" aria-label="Validity message">Validity message</small>
+                        <!-- <span id="contact-foot-note">* Email and/or contact no. must be provided.</span> -->
+                    </div> 
+                    <div class="form-group">
+                        <label for="user-message">Tell us more (required)</label>
+                        <textarea class="form-control" name="user-message" id="user-message" cols="30" rows="5"></textarea>
+                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+                        <small class="message" aria-label="Validity message">Validity message</small>
+                    </div> 
+                    <input class="button" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        
+    </div>   
+
+</body>
+</html> 

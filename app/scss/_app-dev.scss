@@ -1,0 +1,43 @@
+.app-dev.main {
+    padding-block: 3rem;
+    max-width: 500px;
+
+    @include breakpoint-up(lg) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: unset;
+    }
+
+    &> * {
+        width: 100%;
+    }
+    ul {
+        padding-inline-start: 1em;
+    }
+    li {
+        position: relative;
+        p {
+            display: inline;
+        }
+    }
+    li + li {
+        margin-block-start: 1em;
+    }
+    li::before {
+        content: '•';
+        position: absolute;
+        left: -1em;
+    }
+
+    .graphics-container {
+        padding-block-start: 2rem;
+        img {
+            width: 80%;
+        }
+    }
+    article {
+        margin-block: 2em;
+    }
+   
+}

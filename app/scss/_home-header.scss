@@ -1,0 +1,25 @@
+.header { 
+  $navHeight: 3.5rem;
+  // Hero section
+  .hero {
+    padding-block-start: calc(#{$navHeight} + 5em);
+      .video-container {
+        width: 100%;
+        max-width: 31.25rem;
+        aspect-ratio: 1 / 1;
+      }
+
+      svg {
+        height: 0;  
+        width: 0;
+      }
+      
+      video {
+        -webkit-clip-path: url(#logo-mask);
+        clip-path: url(#logo-mask);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+}

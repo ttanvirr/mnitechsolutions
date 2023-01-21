@@ -1,0 +1,76 @@
+:root {
+    --primary: 180, 85%, 30%; //#0b8c8c
+    --primary-lighter01: 180, 85%, 40%;
+    --primary-darker01: 180, 85%, 20%;
+    --primary-darker02: 180, 85%, 15%;
+    --secondary: 208, 81%, 16%; //#082b4a
+    --secondary-lighter01: 208, 81%, 31%;
+    --secondary-lighter02: 208, 81%, 90%;
+    --white: 0, 0%, 100%;
+    --dark: 0, 0%, 15%;
+
+    // FONTS
+    --fs100: 0.5rem; 
+    --fs200: 0.75rem;
+    --fs300: 0.875rem;
+    --fs400: 1rem;
+    --fs500: 1.25rem;
+    --fs600: 1.5rem;
+    --fs700: 2rem;
+    --fs800: 3rem;
+    --fs900: clamp(2.5rem, 1rem + 3vw, 3.5rem);
+
+    // SPACING
+    --space-xs: 0.25em;
+    --space-sm: 0.5em;
+    --space-md: 1em;  
+    --space-lg: 2em;
+    --space-xl: 3em;
+    --space-xxl: 4em;
+}
+
+@media (min-width: 42rem) {
+:root {
+        --fs500: 1.5rem;
+    }
+    
+}
+
+// Accent Colors
+$primary: var(--primary);
+$primary-lighter01: var(--primary-lighter01);
+$primary-darker01: var(--primary-darker01);
+$primary-darker02: var(--primary-darker02);
+$secondary: var(--secondary);
+$secondary-lighter01: var(--secondary-lighter01);
+$secondary-lighter02: var(--secondary-lighter02);
+
+// Error Colors
+// $error: hsl(350, 100%, 40%);
+// $errorLt: hsl(350, 100%, 90%);
+
+// Neutral Colors
+$white: var(--white);
+$dark: var(--dark);
+// $outline: hsl(0, 0%, 50%);
+// $disabled: hsla(0, 0%, 40%, 0.7);
+
+// spacing
+$space-xs: var(--space-xs);
+$space-sm: var(--space-sm);
+$space-md: var(--space-md);
+$space-lg: var(--space-lg);
+$space-xl: var(--space-xl);
+$space-xxl: var(--space-xxl);
+$radius: 1em;
+
+// fonts
+$fs100: var(--fs100);
+$fs200: var(--fs200);
+$fs300: var(--fs300);
+$fs400: var(--fs400);
+$fs500: var(--fs500);
+$fs600: var(--fs600);
+$fs700: var(--fs700);
+$fs800: var(--fs800);
+$fs900: var(--fs900);

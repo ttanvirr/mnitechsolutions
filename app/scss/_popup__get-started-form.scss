@@ -1,0 +1,23 @@
+.get-started.popup {
+    background-color: rgba($color: #000000, $alpha: 0.92);
+    padding-block: 5vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 9999;
+    
+    .close-btn {
+        display: block;
+        margin-inline-start: auto;
+        margin-block-end: 2rem;
+    }
+    .form-container {
+        background-color: white;
+        padding: 3rem;
+        border-radius: 0.5rem;
+    }
+
+}

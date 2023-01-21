@@ -1,0 +1,16 @@
+.home {
+    .about {
+        article {
+            border: 8px solid hsla($secondary, 0.2);
+            border-radius: 0.5em;
+            padding-block: 2em;
+            padding-inline: 2em;
+            text-align: center;
+        }
+        
+        .subtitle {
+            margin-inline: auto;
+        }
+        
+    }
+}

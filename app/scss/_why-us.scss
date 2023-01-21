@@ -1,0 +1,82 @@
+.why-us {
+    background-color: $secondary;
+    color: $white;
+    background-image: url(./../../images/why-us__ellipse-2.svg);
+    background-repeat: no-repeat;
+    background-position: -80px -4px;
+    
+    .container {       
+        .why-us__slider {
+            gap: 1rem;
+            background-color: $secondary;
+            color: $white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 0 1rem 1rem 1rem;
+            background-image: url(./../../images/why-us__ellipse-1.svg);
+            background-repeat: no-repeat;
+            background-position: -96px -100px;
+
+            .flex {
+                gap: 1.5rem;
+                @include breakpoint-up(md) {
+                    flex-direction: row;
+                }
+                .img-container {
+                    background-color: $primary;
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    border-radius: 50%;
+                    position: relative;
+                    @include breakpoint-up(md) {
+                        width: 7rem;
+                        height: 7rem;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 5%;
+                        left: 5%;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        background-color: $primary;
+                    }
+    
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 2;
+                    }
+                }
+                .text-container {
+                    max-width: 350px;
+                }
+            }
+
+            h3, p {
+                margin: 0;
+            }
+
+            p {
+                max-width: 90%;
+            }
+
+            .btn-group {
+                gap: 0.5rem;
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0.25rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    padding: 0.5rem;
+                    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}

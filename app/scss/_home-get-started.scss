@@ -1,0 +1,18 @@
+.home {
+    .get-started {
+        .grid-2s {
+            @include breakpoint-up(lg) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: $space-xxl;
+            }
+        }
+       
+        img {
+            width: 100%;
+            max-width: 30em;
+            opacity: 0.7;
+        }
+
+    }
+}
