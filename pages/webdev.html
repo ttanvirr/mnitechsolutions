@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MNI Tech Solutions | IT & Business Solutions</title>
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- my styles -->
-    <link rel="stylesheet" href="./../dist/style.css">
+    <link rel="stylesheet" href="./../dist/style.css" />
     <!-- scripts -->
     <script src="./../app/js/onLoad.js" defer></script>
     <script src="./../app/js/scrolled.js" defer></script>
@@ -21,73 +24,108 @@
     <script src="./../app/components/pageBanner.js" defer></script>
     <script src="./../app/components/footer.js" defer></script>
     <script src="./../app/components/fabs.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header | bg--secondary clr--white">
+      <navbar-component></navbar-component>
 
-        <navbar-component></navbar-component>
-
-        <!-- banner section -->
-        <page-banner-component bg-src="./../images/about-graphics.png">
-            <div slot="page-title">Web development</div>
-        </page-banner-component>
-
+      <!-- banner section -->
+      <page-banner-component bg-src="./../images/about01.svg">
+        <div slot="page-title">Web development</div>
+      </page-banner-component>
     </header>
 
     <div class="breadcrumb">
-        <div class="container">
-            <a href="/">Home</a> <span>&gt;</span>
-            <a>Services</a> <span>&gt;</span>
-            <a class="current">Web development</a>
-        </div>
+      <div class="container">
+        <a href="/">Home</a> <span>&gt;</span> <a>Services</a> <span>&gt;</span>
+        <a class="current">Web development</a>
+      </div>
     </div>
     <div class="webdev main container">
-        <div class="graphics-container">
-            <img class="page-graphics" src="./../images/mni-web-dev.svg" alt="">
-        </div>
-        <div class="articles">
-            <article class="why-website">
-                <h1 class="article-title">Why every company needs a website</h1>
-                <p class="text-justify">A business’s online presence, regardless of industry, can have a massive impact on its success. A majority of their customers will visit their website before taking a service. Having a strong online presence, particularly a website, can be make or break for generating more revenue.
-                </p>
-            </article>
-            <article class="webdev-services">
-                <h1 class="article-title">Our web development services</h1>
-                <p class="text-justify">MNI tech has team of experienced Front-end developers, Back-end developers and full stack developers to ensure you a high quality website that brings success to your business.</p>
-            </article>
-            <article class="frontend-dev">
-                <h1 class="article-title">What is frontend development?</h1>
-                <ul role="list">
-                    <li class="text-justify">
-                        <p>Front-end development focuses on the visual aspects of a website – the part that users see and interact with.</p> 
-                    </li>
-                    <li class="text-justify">
-                        <p>Front-end developers design and construct the user experience elements on the web page or app including buttons, menus, pages, links, graphics and more.</p>
-                    </li>
-                    <li class="text-justify">
-                        <p>The front-end is built using a combination of technologies such as Hypertext Markup Language (HTML), JavaScript and Cascading Style Sheets (CSS).</p>
-                    </li>
-                </ul>
-            </article>
-            <article class="backend-dev">
-                <h1 class="article-title">What is backend development?</h1>
-                <ul role="list">
-                    <li class="text-justify">
-                        <p>Back-end development focuses on the server side of websites. It comprises a site's structure, system, data, and logic.</p>
-                    </li>
-                    <li class="text-justify">
-                        <p> Back-end developers use technical skills to perform the behind-the-scenes work that creates a website's structure and overall functionality, allowing a site's front end to exist. These professionals create a site's operations, databases, and application programming interface (API).</p>
-                    </li>
-                    <li class="text-justify">
-                        <p>The back end includes an application, server, and database. Computer users often do not see the elements of back-end development, which remain below the hood of a website.</p>
-                    </li>
-                </ul>
-            </article>
-            <article class="full-stack-dev">
-                <h1 class="article-title">What is full stack development?</h1>
-                <p class="text-justify">Full stack development refers to the development of both front-end (client side) and back-end (server side) portions of web application. Full stack web developers have the ability to design complete web applications and websites.</p>
-            </article>
-        </div>
+      <div class="graphics-container">
+        <img class="page-graphics" src="./../images/mni-web-dev.svg" alt="" />
+      </div>
+      <div class="articles">
+        <article class="why-website">
+          <h1 class="article-title">Why every company needs a website</h1>
+          <p class="text-justify">
+            A business’s online presence, regardless of industry, can have a
+            massive impact on its success. A majority of their customers will
+            visit their website before taking a service. Having a strong online
+            presence, particularly a website, can be make or break for
+            generating more revenue.
+          </p>
+        </article>
+        <article class="webdev-services">
+          <h1 class="article-title">Our web development services</h1>
+          <p class="text-justify">
+            MNI tech has team of experienced Front-end developers, Back-end
+            developers and full stack developers to ensure you a high quality
+            website that brings success to your business.
+          </p>
+        </article>
+        <article class="frontend-dev">
+          <h1 class="article-title">What is frontend development?</h1>
+          <ul role="list">
+            <li class="text-justify">
+              <p>
+                Front-end development focuses on the visual aspects of a website
+                – the part that users see and interact with.
+              </p>
+            </li>
+            <li class="text-justify">
+              <p>
+                Front-end developers design and construct the user experience
+                elements on the web page or app including buttons, menus, pages,
+                links, graphics and more.
+              </p>
+            </li>
+            <li class="text-justify">
+              <p>
+                The front-end is built using a combination of technologies such
+                as Hypertext Markup Language (HTML), JavaScript and Cascading
+                Style Sheets (CSS).
+              </p>
+            </li>
+          </ul>
+        </article>
+        <article class="backend-dev">
+          <h1 class="article-title">What is backend development?</h1>
+          <ul role="list">
+            <li class="text-justify">
+              <p>
+                Back-end development focuses on the server side of websites. It
+                comprises a site's structure, system, data, and logic.
+              </p>
+            </li>
+            <li class="text-justify">
+              <p>
+                Back-end developers use technical skills to perform the
+                behind-the-scenes work that creates a website's structure and
+                overall functionality, allowing a site's front end to exist.
+                These professionals create a site's operations, databases, and
+                application programming interface (API).
+              </p>
+            </li>
+            <li class="text-justify">
+              <p>
+                The back end includes an application, server, and database.
+                Computer users often do not see the elements of back-end
+                development, which remain below the hood of a website.
+              </p>
+            </li>
+          </ul>
+        </article>
+        <article class="full-stack-dev">
+          <h1 class="article-title">What is full stack development?</h1>
+          <p class="text-justify">
+            Full stack development refers to the development of both front-end
+            (client side) and back-end (server side) portions of web
+            application. Full stack web developers have the ability to design
+            complete web applications and websites.
+          </p>
+        </article>
+      </div>
     </div>
 
     <!-- footer -->
@@ -96,76 +134,150 @@
     <!-- floating action buttons -->
     <fabs-component></fabs-component>
 
-     <!-- Get started popup form | trigger by js -->
-     <div class="get-started popup | hide">
-        <div class="container">
-            <button class="close-btn | button">CLOSE</button>
-        </div>
-        
-        <div class="container"> 
-            <div class="form-container">
-                <form id="form" class="form | flow" action="/" method="get" autocomplete="off">
-                    <div class="form-group">
-                        <label for="fname">First name (required)</label>
-                        <input class="form-control" type="text" id="fname" name="first-name" required autocomplete="first-name">
-                        <small class="message fname-message" aria-label="Validity message"></small>
-                    </div>
-                    <div class="form-group">
-                        <label for="lname">Last name</label>
-                        <input class="form-control" type="text" id="lname" name="last-name" autocomplete="last-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="company-name">Company name</label>
-                        <input class="form-control" type="text" id="company-name" name="company-name" autocomplete="company-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address (required)</label>
-                        <input class="form-control" type="text" id="address" name="address" autocomplete="address">
-                        <small class="message address-message" aria-label="Validity message"></small>
-                    </div>
-                    <div class="form-group" >
-                        <label for="service">What service do you need (required)</label>
-                        <div class="select-container">
-                            <input class="select | form-control" type="text" id="service" name="service" placeholder="Select or type a sevice..." required aria-labelledby="service-list">
-                            <ul id="service-list" class="option-group">
-                                <li class="option">IT service</li>
-                                <li class="option">App development</li>
-                                <li class="option">Website development</li>
-                                <li class="option">Graphic design</li>
-                                <li class="option">UI design</li>
-                                <li class="option">Architectural solution</li>
-                            </ul>
-                        </div>
-                        <small class="message service-message" aria-label="Validity message"></small>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address (required)</label>
-                        <input pattern="^[\w\.+-]+@([\w-]+\.)+[a-zA-Z]{2,4}$" required class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com">
-                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
-                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
-                        <small class="message email-message" aria-label="Validity message"></small>
-                    </div> 
-                    <div class="form-group">
-                        <label for="phone">Contact no. (recommended)</label>
-                        <input class="form-control" type="tel" id="phone" name="phone" autocomplete="contact">
-                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
-                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
-                        <small class="message" aria-label="Validity message">Validity message</small>
-                        <!-- <span id="contact-foot-note">* Email and/or contact no. must be provided.</span> -->
-                    </div> 
-                    <div class="form-group">
-                        <label for="user-message">Tell us more (required)</label>
-                        <textarea class="form-control" name="user-message" id="user-message" cols="30" rows="5"></textarea>
-                        <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
-                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
-                        <small class="message" aria-label="Validity message">Validity message</small>
-                    </div> 
-                    <input class="button" type="submit" value="Submit">
-                </form>
-            </div>
-        </div>
-        
-    </div>   
+    <!-- Get started popup form | trigger by js -->
+    <div class="get-started popup | hide">
+      <div class="container">
+        <button class="close-btn | button">CLOSE</button>
+      </div>
 
-</body>
-</html> 
+      <div class="container">
+        <div class="form-container">
+          <form
+            id="form"
+            class="form | flow"
+            action="/"
+            method="get"
+            autocomplete="off"
+          >
+            <div class="form-group">
+              <label for="fname">First name (required)</label>
+              <input
+                class="form-control"
+                type="text"
+                id="fname"
+                name="first-name"
+                required
+                autocomplete="first-name"
+              />
+              <small
+                class="message fname-message"
+                aria-label="Validity message"
+              ></small>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last name</label>
+              <input
+                class="form-control"
+                type="text"
+                id="lname"
+                name="last-name"
+                autocomplete="last-name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="company-name">Company name</label>
+              <input
+                class="form-control"
+                type="text"
+                id="company-name"
+                name="company-name"
+                autocomplete="company-name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address">Address (required)</label>
+              <input
+                class="form-control"
+                type="text"
+                id="address"
+                name="address"
+                autocomplete="address"
+              />
+              <small
+                class="message address-message"
+                aria-label="Validity message"
+              ></small>
+            </div>
+            <div class="form-group">
+              <label for="service">What service do you need (required)</label>
+              <div class="select-container">
+                <input
+                  class="select | form-control"
+                  type="text"
+                  id="service"
+                  name="service"
+                  placeholder="Select or type a sevice..."
+                  required
+                  aria-labelledby="service-list"
+                />
+                <ul id="service-list" class="option-group">
+                  <li class="option">IT service</li>
+                  <li class="option">App development</li>
+                  <li class="option">Website development</li>
+                  <li class="option">Graphic design</li>
+                  <li class="option">UI design</li>
+                  <li class="option">Architectural solution</li>
+                </ul>
+              </div>
+              <small
+                class="message service-message"
+                aria-label="Validity message"
+              ></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address (required)</label>
+              <input
+                pattern="^[\w\.+-]+@([\w-]+\.)+[a-zA-Z]{2,4}$"
+                required
+                class="form-control"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="name@example.com"
+              />
+              <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+              <small
+                class="message email-message"
+                aria-label="Validity message"
+              ></small>
+            </div>
+            <div class="form-group">
+              <label for="phone">Contact no. (recommended)</label>
+              <input
+                class="form-control"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="contact"
+              />
+              <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+              <small class="message" aria-label="Validity message"
+                >Validity message</small
+              >
+              <!-- <span id="contact-foot-note">* Email and/or contact no. must be provided.</span> -->
+            </div>
+            <div class="form-group">
+              <label for="user-message">Tell us more (required)</label>
+              <textarea
+                class="form-control"
+                name="user-message"
+                id="user-message"
+                cols="30"
+                rows="5"
+              ></textarea>
+              <!-- <i class="fa-solid fa-circle-check" aria-label="Valid"></i>
+                        <i class="fa-solid fa-circle-exclamation" aria-label="Error"></i> -->
+              <small class="message" aria-label="Validity message"
+                >Validity message</small
+              >
+            </div>
+            <input class="button" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

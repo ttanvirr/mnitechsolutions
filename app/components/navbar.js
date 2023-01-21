@@ -1,5 +1,5 @@
-const navbarComponent = document.querySelector('navbar-component');
-const navbarTemplate = document.createElement('template');
+const navbarComponent = document.querySelector('navbar-component')
+const navbarTemplate = document.createElement('template')
 
 const assigned = `
     <link rel="stylesheet" href="./../dist/style.css">
@@ -324,128 +324,127 @@ const assigned = `
             </div>
         </div>
     </nav>
-`;
+`
 
-navbarTemplate.innerHTML= assigned;
+navbarTemplate.innerHTML = assigned
 
 class Navbar extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super()
+  }
+
+  connectedCallback() {
+    const shadowRoot = this.attachShadow({ mode: 'open' })
+    shadowRoot.appendChild(navbarTemplate.content.cloneNode(true))
+
+    const navbar = shadowRoot.querySelector('.navbar')
+    const menuToggler = shadowRoot.querySelector('.menu-toggler')
+    const menu = shadowRoot.querySelector('.menu')
+    const dropdownTitles = shadowRoot.querySelectorAll('.dropdown__title')
+    const currentLocation = location.href
+    const menuItems = shadowRoot.querySelectorAll('.menu>li>a')
+
+    // Active menu based on current url
+    menuItems.forEach((item) => {
+      if (item.href === currentLocation) {
+        item.classList.add('active')
+      }
+    })
+    if (!menuToggler.classList.contains('open')) {
+      menu.classList.remove('open')
     }
 
+    menuToggler.addEventListener('click', () => {
+      menuToggler.classList.toggle('open')
 
-    connectedCallback() {
-        
-        const shadowRoot = this.attachShadow({mode: 'open'});
-        shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
-        
-        const navbar = shadowRoot.querySelector('.navbar');
-        const menuToggler = shadowRoot.querySelector('.menu-toggler');
-        const menu = shadowRoot.querySelector('.menu');
-        const dropdownTitles = shadowRoot.querySelectorAll('.dropdown__title');
-        const currentLocation = location.href;
-        const menuItems = shadowRoot.querySelectorAll('.menu>li>a');
-        
-        // Active menu based on current url
-        menuItems.forEach(item=> {
-            if(item.href === currentLocation) {
-                item.classList.add('active');
-            }
-        })
-        if(!menuToggler.classList.contains('open')) {
-            menu.classList.remove('open');
+      if (menuToggler.classList.contains('open')) {
+        navbar.classList.add('expanded')
+        menu.classList.add('open')
+        document.body.style.overflow = 'hidden'
+      } else {
+        navbar.classList.remove('expanded')
+        menu.classList.remove('open')
+        document.body.style.overflow = 'auto'
+      }
+    })
+
+    dropdownTitles.forEach((dropdownTitle) => {
+      const dropdownMenuItems = navbar.querySelectorAll('.dropdown a')
+      const dropdownMenu = navbar.querySelector('.dropdown__menu')
+
+      dropdownMenuItems.forEach((item) => {
+        if (item.href === currentLocation) {
+          dropdownTitle.classList.add('active')
+        }
+      })
+
+      dropdownTitle.addEventListener('click', () => {
+        dropdownTitle.classList.toggle('is-active')
+        if (dropdownTitle.classList.contains('is-active')) {
+          dropdownMenu.classList.add('open')
+        } else {
+          dropdownMenu.classList.remove('open')
         }
 
-        menuToggler.addEventListener('click', () => {
-            menuToggler.classList.toggle('open');
-
-            if (menuToggler.classList.contains('open')) {
-                navbar.classList.add('expanded');
-                menu.classList.add('open');
-                document.body.style.overflow = "hidden";
-            } else {
-                navbar.classList.remove('expanded');
-                menu.classList.remove('open');
-                document.body.style.overflow = "auto";
-            }
-
-        });
-
-       
-        dropdownTitles.forEach(dropdownTitle => {
-            const dropdownMenuItems = navbar.querySelectorAll('.dropdown a');
-            const dropdownMenu = navbar.querySelector('.dropdown__menu');
-            
-            dropdownMenuItems.forEach(item => {
-                if(item.href === currentLocation) {
-                    dropdownTitle.classList.add('active');
-                }
-            });
-
-            dropdownTitle.addEventListener('click', () => {
-                dropdownTitle.classList.toggle('is-active');
-                if(dropdownTitle.classList.contains('is-active')) {
-                    dropdownMenu.classList.add('open');
-                } else {
-                    dropdownMenu.classList.remove('open');
-                }
-
-                let height = dropdownMenu.scrollHeight + 'px';   // must add 'px'
-                
-                if(dropdownMenu.style.getPropertyValue('--calc-height') !== height  ) {
-                    dropdownMenu.style.setProperty('--calc-height', height);
-                }
-                else {
-                    dropdownMenu.style.setProperty('--calc-height', 0)
-                }
-            });
-            // dropdownTitle.addEventListener('focusout', () => {
-            //     // dropdownTitle.classList.remove('is-active');
-            //     // dropdownMenu.classList.remove('open');
-            //     // dropdownMenu.style.setProperty('--calc-height', 0);
-            // });
-        });
-    
-        window.addEventListener('scroll', () => {
-            if(document.body.classList.contains('scrolled')) {
-                navbar.classList.add('scrolled')
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        window.addEventListener('load', () => {
-            if(document.body.classList.contains('scrolled')) {
-                navbar.classList.add('scrolled')
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        const getStartedBtn = shadowRoot.querySelector(".get-started-button");
-
-        const getStartedPopupForm = document.querySelector(".get-started.popup");
-        console.log(getStartedPopupForm);
-        getStartedBtn.addEventListener("click", () => {
-            getStartedPopupForm.classList.remove("hide");
-        });
-
-        // Media Queries
-        const mediaQueryMd = matchMedia('(min-width:48rem)');
-
-        function handleScreenChangeMd(e) {  
-            if (e.matches) {
-                // Optional changes
-
-                menuToggler.classList.remove('open');
-                navbar.classList.remove('expanded');
-                menu.classList.remove('open');
-                document.body.style.overflow = "auto";
-            }
+        let height = dropdownMenu.scrollHeight + 'px' // must add 'px'
+        if (dropdownMenu.style.getPropertyValue('--calc-height') !== height) {
+          dropdownMenu.style.setProperty('--calc-height', height)
+        } else {
+          dropdownMenu.style.setProperty('--calc-height', 0)
         }
+      })
+      //   dropdownTitle.addEventListener('focusout', () => {
+      //     dropdownTitle.classList.remove('is-active')
+      //     dropdownMenu.classList.remove('open')
+      //     let height = dropdownMenu.scrollHeight + 'px' // must add 'px'
+      //     if (dropdownMenu.style.getPropertyValue('--calc-height') !== height) {
+      //       dropdownMenu.style.setProperty('--calc-height', height)
+      //     } else {
+      //       dropdownMenu.style.setProperty('--calc-height', 0)
+      //     }
+      //   })
+    })
 
-        mediaQueryMd.addEventListener('change', handleScreenChangeMd);
+    window.addEventListener('scroll', () => {
+      if (document.body.classList.contains('scrolled')) {
+        navbar.classList.add('scrolled')
+      } else {
+        navbar.classList.remove('scrolled')
+      }
+    })
+
+    window.addEventListener('load', () => {
+      if (document.body.classList.contains('scrolled')) {
+        navbar.classList.add('scrolled')
+      } else {
+        navbar.classList.remove('scrolled')
+      }
+    })
+
+    const getStartedBtn = shadowRoot.querySelector('.get-started-button')
+
+    const getStartedPopupForm = document.querySelector('.get-started.popup')
+    console.log(getStartedPopupForm)
+    getStartedBtn.addEventListener('click', () => {
+      getStartedPopupForm.classList.remove('hide')
+    })
+
+    // Media Queries
+    const mediaQueryMd = matchMedia('(min-width:48rem)')
+
+    function handleScreenChangeMd(e) {
+      if (e.matches) {
+        // Optional changes
+
+        menuToggler.classList.remove('open')
+        navbar.classList.remove('expanded')
+        menu.classList.remove('open')
+        document.body.style.overflow = 'auto'
+      }
     }
+
+    mediaQueryMd.addEventListener('change', handleScreenChangeMd)
+  }
 }
 
-customElements.define('navbar-component', Navbar);
+customElements.define('navbar-component', Navbar)

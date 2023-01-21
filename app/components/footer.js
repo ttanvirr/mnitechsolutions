@@ -1,5 +1,5 @@
-const footerTemplate = document.createElement('template');
-footerTemplate.innerHTML=`
+const footerTemplate = document.createElement('template')
+footerTemplate.innerHTML = `
 <link rel="stylesheet" href="./../dist/style.css">
 <style>
     h3 {
@@ -109,6 +109,7 @@ footerTemplate.innerHTML=`
                 <h3>Useful Links </h3>
                 <ul role="list" class="links | flex-col | nowrap">
                     <li><a class="link link--footer" href="./../../pages/about.html">About us</a></li>
+                    <li><a class="link link--footer" href="./../../pages/contact.html">Contact us</a></li>
                     <li><a class="link link--footer" href="./../../pages/staffing-solutions.html">Staffing solutions</a></li>
                     <li><a class="link link--footer" href="./../../pages/app-dev.html">App development</a></li>
                     <li><a class="link link--footer" href="./../../pages/webdev.html">Web development</a></li>
@@ -140,14 +141,14 @@ footerTemplate.innerHTML=`
         <p>Developed by <span class="color-primary">Tanvir's Kodelab</span></p>
     </div>
 </footer>
-`;
+`
 
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
-    }
+  constructor() {
+    super()
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true))
+  }
 }
 
-customElements.define('footer-component', Footer);
+customElements.define('footer-component', Footer)

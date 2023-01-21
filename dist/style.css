@@ -975,8 +975,11 @@ input.select {
   display: block;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
-  -webkit-margin-after: 2rem;
-          margin-block-end: 2rem;
+  -webkit-margin-after: 0.5rem;
+          margin-block-end: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-width: unset;
 }
 .get-started.popup .form-container {
   background-color: white;
