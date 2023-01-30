@@ -23,23 +23,23 @@ button.button,
 
 button.button,
 [type='submit'].button {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
-  
-    @media screen and (-ms-high-contrast: active) {
-      border: 2px solid currentcolor;
-    }
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
 }
 
 a.button {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 // Visual Styles
 
-a.button, 
+a.button,
 button.button,
 [type='submit'].button {
   background-color: $btnBgColor;
@@ -54,7 +54,7 @@ button.button,
   text-transform: capitalize;
   transition: 220ms all ease-in-out;
 
-  &:hover{
+  &:hover {
     background: $btnHoverBgColor;
   }
   &:active {
@@ -94,7 +94,6 @@ button.button,
   }
 }
 
-
 //////////////////////////////////////////////////////
 // #Link COMPONENT
 // Guideline: https://css-tricks.com/a-complete-guide-to-links-and-buttons/
@@ -129,7 +128,6 @@ a.link--footer:hover {
   box-shadow: 0 -5em hsl($white) inset;
 }
 
-
 //////////////////////////////////////////////////////
 // #FORM COMPONENT
 // Guideline: https://web.dev/learn/forms
@@ -144,7 +142,7 @@ label,
 input,
 textarea,
 select,
-[type="submit"] {
+[type='submit'] {
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -158,9 +156,7 @@ select {
   outline: none;
   transition: 280ms all ease-in-out;
 }
-:is(input,
-textarea,
-select):focus-visible {
+:is(input, textarea, select):focus-visible {
   border: 2px solid hsla($secondary, 1);
   box-shadow: 0 0 8px hsla($secondary, 0.7);
 }
@@ -172,7 +168,7 @@ label {
 input {
   border-radius: 100vh;
 }
- // input[readonly] {
+// input[readonly] {
 //     cursor: default;
 // }
 textarea {
@@ -180,7 +176,7 @@ textarea {
   resize: vertical;
 }
 
-[type="submit"] {
+[type='submit'] {
   margin-block-start: 2em;
 }
 ::placeholder {
@@ -202,28 +198,28 @@ textarea {
   font-weight: 500;
 }
 .form-group.error .message,
-.form-group.success .message{
+.form-group.success .message {
   display: block;
 }
 .form-group.error .message {
   color: #ff3333;
-} 
+}
 .form-group.success .message {
   color: #23cc71;
-} 
+}
 .form-group .message::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free"; 
-  font-weight: 900; 
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
   margin-right: 0.25em;
 }
 .form-group.error .message::before {
-  content: "\f06a";
-} 
+  content: '\f06a';
+}
 .form-group.success .message::before {
-  content: "\f058";
+  content: '\f058';
 }
 
 .select-container {
@@ -251,17 +247,16 @@ input.select {
 }
 
 .option-group {
-  
-  height: 0;         
+  height: 0;
   overflow: hidden;
-  
+
   .option {
-      padding: 0.5em 1em;
-      cursor: default;
-      border-bottom: 1px solid hsla($secondary, 0.1);
-      &:hover {
-          background-color: hsla($secondary, 0.2);
-      }
+    padding: 0.5em 1em;
+    cursor: default;
+    border-bottom: 1px solid hsla($secondary, 0.1);
+    &:hover {
+      background-color: hsla($secondary, 0.2);
+    }
   }
 }
 .select-container:focus-within .option-group {
@@ -273,9 +268,6 @@ input.select {
   box-shadow: 0 0 0.25rem hsla($secondary, 0.7);
 }
 
-
 //////////////////////////////////////////////////////
 // #PAGE BANNER
 /////////////////////////////////////////////////////
-
-

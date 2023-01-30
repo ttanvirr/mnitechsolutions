@@ -371,9 +371,7 @@ select {
   transition: 280ms all ease-in-out;
 }
 
-:is(input,
-textarea,
-select):focus-visible {
+:is(input, textarea, select):focus-visible {
   border: 2px solid hsla(var(--secondary), 1);
   box-shadow: 0 0 8px hsla(var(--secondary), 0.7);
 }
@@ -664,6 +662,18 @@ input.select {
 }
 .about.main li p {
   display: inline;
+}
+.about.main li a {
+  font-weight: 600;
+}
+.about.main li a,
+.about.main li a:hover,
+.about.main li a:focus {
+  box-shadow: none;
+}
+.about.main li a:hover,
+.about.main li a:focus {
+  color: hsl(var(--primary-darker01));
 }
 .about.main li + li {
   -webkit-margin-before: 1em;
