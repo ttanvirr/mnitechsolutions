@@ -1,7 +1,11 @@
+## Accessibility
+
 ## Responsive `<img>`
+
 https://web.dev/learn/design/responsive-images/
 
 ### CSS
+
 ```
 img {
   max-inline-size: 100%;
@@ -11,7 +15,9 @@ img {
   object-position: top center;
 }
 ```
+
 ### HTML
+
 ```
 <img
     src="small-image.png"
@@ -30,7 +36,9 @@ img {
 ```
 
 ## `<picture>` Element
+
 https://web.dev/learn/design/picture-element/
+
 ```
 <picture>
   <source srcset="large.png 1x" media="(min-width: 75em)">
@@ -41,7 +49,9 @@ https://web.dev/learn/design/picture-element/
 ```
 
 ## Using Inline SVG ICON
+
 https://web.dev/learn/design/icons/
+
 ```
 <figure>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-21 -21 42 42" width="100" height="100">
@@ -58,7 +68,9 @@ https://web.dev/learn/design/icons/
 ```
 
 ## Buttons or Links With SVG ICON
+
 https://web.dev/learn/design/icons/
+
 ```
 <button class="menu-trigger" aria-label="Menu">
     <svg aria-hidden="true" focusable="false" width="24" height="28" viewBox="0 0 24 28">
@@ -66,6 +78,3 @@ https://web.dev/learn/design/icons/
     </svg>
 </button>
 ```
-
-
-
