@@ -1,88 +1,88 @@
 .home {
-    .services {
-        >.container {
-            --flow-space: 4em;
-        }
-    
-        &__service {
-            .title {
-                text-align: center;
-                // max-inline-size: fit-content;
-                max-inline-size: 100%;
-                margin-inline: auto;
-                padding-bottom: 0.125em;
-                // box-shadow: 0 -16px hsla($primary, 0.2) inset;
-                font-size: 36px;
-                color: hsl($secondary);
-                @include breakpoint-up(md) {
-                    text-align: left ;
-                }
-            }
-            .grid-2s {
-                display: grid;
-                grid-template-columns: 1fr;
-                align-items: center;
-                gap: $space-xl;
-                max-inline-size: 400px;
-                margin-inline: auto;
-        
-                @include breakpoint-up(md) {
-                    grid-template-columns: 1fr 1fr;
-                    max-inline-size: unset;
-                }
-     
-            }
-           
-            &:nth-of-type(even) {
-                @include breakpoint-up(md) {
-                    .grid-2s > *:nth-of-type(1) {
-                        order: 1
-                    }
-                }
-            }
-            .img-container {
-                position: relative;
-                // margin-inline: auto;
-            }
-            // .half-bleed-left {
-            //     position: absolute;
-            //     bottom: 0;
-            //     right: 50%;
-            //     width: 100vw;
-            //     height: 50%;
-            //     background-color: hsla($secondary, 0.3);
-            //     z-index: -1;
-            // }
-            // .half-bleed-right {
-            //     position: absolute;
-            //     bottom: -2rem;
-            //     left: 0;
-            //     width: 100vw;
-            //     height: 60%;
-            //     background-color: hsla($secondary, 0.3);
-            //     z-index: -1;
-            // }
-            .list-container {
-                margin-block-end: $space-md;
-            }
-            li {
-                display: grid;
-                gap: 0.75em;
-                grid-template-columns: 35px 1fr;
-                padding-block: 1em;          
-                &:not(:last-of-type) {
-                    border-bottom: 4px solid hsla($secondary, 0.1);   
-                    @include breakpoint-up(md) {
-                        border: none;
-                    }
-                }
-                .icon {
-                    justify-self: center;
-                    opacity: 0.8;
-                }
-            }
-    
-           
-        }
+  .services {
+    > .container {
+      --flow-space: 4em;
+      @include breakpoint-up(md) {
+        max-width: 850px;
+      }
     }
+
+    &__service {
+      .title {
+        text-align: center;
+        // max-inline-size: fit-content;
+        max-inline-size: 100%;
+        margin-inline: auto;
+        padding-bottom: 0.125em;
+        // box-shadow: 0 -16px hsla($primary, 0.2) inset;
+        font-size: 36px;
+        color: hsl($secondary);
+        @include breakpoint-up(md) {
+          text-align: left;
+        }
+      }
+      .grid-2s {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: $space-xl;
+        max-inline-size: 400px;
+        margin-inline: auto;
+
+        @include breakpoint-up(md) {
+          grid-template-columns: 1fr 1fr;
+          max-inline-size: unset;
+        }
+      }
+
+      &:nth-of-type(even) {
+        @include breakpoint-up(md) {
+          .grid-2s > *:nth-of-type(1) {
+            order: 1;
+          }
+        }
+      }
+      .img-container {
+        position: relative;
+        // margin-inline: auto;
+      }
+      // .half-bleed-left {
+      //     position: absolute;
+      //     bottom: 0;
+      //     right: 50%;
+      //     width: 100vw;
+      //     height: 50%;
+      //     background-color: hsla($secondary, 0.3);
+      //     z-index: -1;
+      // }
+      // .half-bleed-right {
+      //     position: absolute;
+      //     bottom: -2rem;
+      //     left: 0;
+      //     width: 100vw;
+      //     height: 60%;
+      //     background-color: hsla($secondary, 0.3);
+      //     z-index: -1;
+      // }
+      .list-container {
+        margin-block-end: $space-md;
+      }
+      li {
+        display: grid;
+        gap: 0.75em;
+        grid-template-columns: 35px 1fr;
+        padding-block: 1em;
+        &:not(:last-of-type) {
+          border-bottom: 4px solid hsla($secondary, 0.1);
+          @include breakpoint-up(md) {
+            border: none;
+          }
+        }
+        .icon {
+          justify-self: center;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }

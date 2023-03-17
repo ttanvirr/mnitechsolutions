@@ -91,12 +91,10 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -237,7 +235,7 @@ button.button,
 }
 @media screen and (-ms-high-contrast: active) {
   button.button,
-[type=submit].button {
+  [type=submit].button {
     border: 2px solid currentcolor;
   }
 }
@@ -401,10 +399,6 @@ textarea {
   color: hsla(var(--secondary), 0.7);
 }
 
-:-ms-input-placeholder {
-  color: hsla(var(--secondary), 0.7);
-}
-
 ::placeholder {
   color: hsla(var(--secondary), 0.7);
 }
@@ -523,6 +517,11 @@ input.select {
 
 .home .services > .container {
   --flow-space: 4em;
+}
+@media (min-width: 48rem) {
+  .home .services > .container {
+    max-width: 850px;
+  }
 }
 .home .services__service .title {
   text-align: center;
