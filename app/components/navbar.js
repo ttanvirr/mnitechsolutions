@@ -37,7 +37,7 @@ const assigned = `
             overflow: hidden;
         }
         .menu-toggler > span {
-            width: 2rem;
+            width: 1.5rem;
             height: 0.125rem;
             background-color: hsl(var(--white));
             transition: 300ms all ease-in-out;

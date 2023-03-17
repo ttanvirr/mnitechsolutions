@@ -138,7 +138,7 @@ footerTemplate.innerHTML = `
     </div>
     <div class="row two text-center" aria-label="Copyright">
         <p>&copy; <span class="color-primary">MNI Tech Solutions</span> | 2022 to present | All rights reserved.<br></p>
-        <p>Developed by <span class="color-primary">Tanvir's Kodelab</span></p>
+        <p>Developed by <span class="color-primary">Zero.error Codelab</span></p>
     </div>
 </footer>
 `
